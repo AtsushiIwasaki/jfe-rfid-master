@@ -67,11 +67,37 @@ EOF;
         return $html;
     }
 */
+
+/*
+    //3-1 PHPテンプレートの利用
     public function index($id='zero')
     {
         //return view('hello.index');
         $data = ['msg'=>'これはコントローラから渡されたメッセージです', 'id'=>$id];
         return view('hello.index', $data);
     }
+*/
+    // 3-2 Bladeテンプレートを使う
+    // view/hello/index.blade.phpに渡す
+    public function index() {
+//        $data = ['msg'=>'これはBladeを利用したサンプルです',];
+//        return view('hello.index', $data);
+        $data = [
+            'msg'=>'お名前を入力してください',
+        ];
+        return view('hello.index', $data);
+    }
 
+    //3-2 Bladeテンプレートを使う
+    //web.phpにRoute::post('hello', 'HelloController@post')を追加
+    public function post(Request $request) {
+
+        $msg = $request->msg;
+
+        $data = [
+            'msg' => 'こんにちは、' . $msg . 'さん！',
+        ];
+
+        return view('hello.index', $data);
+    }
 }
