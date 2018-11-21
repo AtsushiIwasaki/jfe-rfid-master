@@ -45,7 +45,7 @@ EOF;
     }
 */
 
-
+/*
     public function index()
     {
         global $head, $style, $body, $end;
@@ -66,6 +66,12 @@ EOF;
 
         return $html;
     }
-
+*/
+    public function index($id='zero')
+    {
+        //return view('hello.index');
+        $data = ['msg'=>'これはコントローラから渡されたメッセージです', 'id'=>$id];
+        return view('hello.index', $data);
+    }
 
 }
