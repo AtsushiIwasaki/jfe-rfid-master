@@ -22,7 +22,11 @@ Route::get('/', function () {
 //    return view('hello.index');
 //});
 
-//Route::get('hello', 'HelloController@index');
-Route::get('hello/{id?}', 'HelloController@index');
+Route::get('hello', 'HelloController@index');
+//Route::get('hello/{id?}', 'HelloController@index');
 Route::post('hello', 'helloController@post');
+
+Route::get('hello/add', 'HelloController@add');
+Route::post('hello/add', 'HelloController@create');
+
 
