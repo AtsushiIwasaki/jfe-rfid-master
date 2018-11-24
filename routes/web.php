@@ -28,3 +28,25 @@ Route::post('hello/edit', 'HelloController@update');
 Route::get('hello/del', 'HelloController@del');
 Route::post('hello/del', 'HelloController@remove');
 
+
+
+Route::get('location', 'LocationController@index');
+
+Route::get('location/add', 'LocationController@add');
+Route::post('location/add', 'LocationController@create');
+
+Route::get('location/edit', 'LocationController@edit');
+Route::post('location/edit', 'LocationController@update');
+
+Route::get('location/del', 'LocationController@del');
+Route::post('location/del', 'LocationController@remove');
+
+Route::get('area', 'AreaController@index');
+Route::get('area/add', 'AreaController@add');
+Route::post('area/add', 'AreaController@create');
+Route::get('area/edit', 'AreaController@edit');
+Route::post('area/edit', 'AreaController@update');
+Route::get('area/del', 'AreaController@del');
+Route::post('area/del', 'AreaController@remove');
+
+
