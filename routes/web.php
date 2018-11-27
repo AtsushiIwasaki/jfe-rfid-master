@@ -31,13 +31,10 @@ Route::post('hello/del', 'HelloController@remove');
 
 
 Route::get('location', 'LocationController@index');
-
 Route::get('location/add', 'LocationController@add');
 Route::post('location/add', 'LocationController@create');
-
 Route::get('location/edit', 'LocationController@edit');
 Route::post('location/edit', 'LocationController@update');
-
 Route::get('location/del', 'LocationController@del');
 Route::post('location/del', 'LocationController@remove');
 
@@ -49,4 +46,6 @@ Route::post('area/edit', 'AreaController@update');
 Route::get('area/del', 'AreaController@del');
 Route::post('area/del', 'AreaController@remove');
 
-
+Route::get('element', 'ElementController@index');
+Route::get('rack', 'RackController@index');
+Route::get('rack', 'RackController@index');

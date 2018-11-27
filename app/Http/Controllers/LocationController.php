@@ -58,9 +58,12 @@ class LocationController extends Controller
     //edit
     public function edit(Request $request)
     {
-        $param = ['id' => $request->id];
-        $item = DB::select('select * from locations where id = :id', $param);
-        return view('location.edit', ['form' => $item[0]]);
+        //$param = ['id' => $request->id];
+        //$item = DB::select('select * from locations where id = :id', $param);
+        //return view('location.edit', ['form' => $item[0]]);
+        $id = $request->id;
+        $item = DB::table('locations')->where('id', $id)->first();
+        return view('location.edit', ['form' => $item]);
     }
 
     //edit execute
