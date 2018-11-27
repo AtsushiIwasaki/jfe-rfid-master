@@ -12,6 +12,39 @@
         th {background-color:#999; color:fff; padding:5px 10px;}
         td {border: solid 1px #aaa; color:#999; padding:5px 10px}
         A {color:#999; padding:5px 10px}
+        input[type="text"],
+        textarea {
+            padding: 0.8em;
+            outline: none;
+            border: 1px solid #DDD;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+        textarea {
+            width: 300px;
+        }
+        input[type="text"]:focus,
+        texture:focus {
+            box-shadow: 0 0 7px #3498db;
+            border: 1px solid #3498db;
+        }
+        input {
+            border-radius: 0;
+            background: -moz-linear-gradient(top, #FFF 0%, #EEE);
+            background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE));
+            border: 1px solid #DDD;
+            color: #111;
+            padding: 10px 30px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+        }
+        input:hover {
+            background: -moz-linear-gradient(top, #EFEFEF 0%, #EEE);
+            background: -webkit-gradient(linear, left top, left bottom, from(#EFEFEF), to(#EEE));
+        }
     </style>
 </head>
 

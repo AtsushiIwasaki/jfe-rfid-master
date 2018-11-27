@@ -4,7 +4,7 @@
 
 @section('menubar')
     @parent
-    削除ページ
+    エリアの削除
 @endsection
 
 @section('content')
@@ -12,7 +12,7 @@
     <table>
         <form action="/area/del" method="post">
             {{ csrf_field() }}
-            <input type="hidden" name="id" value="{{$form->id}}">
+            <input type="hidden" name="id" value="{{$form->area_id}}">
             <input type="hidden" name="location_id" value="{{$form->location_id}}">
             <tr>
                 <th>location_name</th>

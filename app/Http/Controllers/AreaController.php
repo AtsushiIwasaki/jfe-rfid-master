@@ -62,7 +62,7 @@ class AreaController extends Controller
     public function edit(Request $request)
     {
         $param = ['id' => $request->id];
-        $item = DB::select('select * from areas inner join locations on locations.id = areas.location_id where areas.id = :id', $param);
+        $item = DB::select('select areas.id as area_id, * from areas inner join locations on locations.id = areas.location_id where areas.id = :id', $param);
         return view('area.edit', ['form' => $item[0]]);
     }
 
@@ -86,7 +86,7 @@ class AreaController extends Controller
     public function del(Request $request)
     {
         $param = ['id' => $request->id];
-        $item = DB::select('select * from areas inner join locations on locations.id = areas.location_id where areas.id = :id', $param);
+        $item = DB::select('select areas.id as area_id, * from areas inner join locations on locations.id = areas.location_id where areas.id = :id', $param);
         return view('area.del', ['form' => $item[0]]);
     }
 

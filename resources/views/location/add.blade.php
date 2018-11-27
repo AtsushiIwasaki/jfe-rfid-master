@@ -7,11 +7,13 @@
 <!--　メニュー -->
 @section('menubar')
     @parent
-    ロケーションの追加
+    ロケーションの新規追加
 @endsection
+
 
 <!-- コンテンツ -->
 @section('content')
+    <A href="/location">戻る</A>
     <table>
         <form action="/location/add" method="post">
             {{ csrf_field() }}

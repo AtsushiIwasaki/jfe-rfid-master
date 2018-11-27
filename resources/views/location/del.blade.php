@@ -4,10 +4,11 @@
 
 @section('menubar')
     @parent
-    削除ページ
+    ロケーションの削除
 @endsection
 
 @section('content')
+    <A href="/location?id={{$form->id}}">戻る</A>
     <table>
         <form action="/location/del" method="post">
             {{ csrf_field() }}
@@ -25,5 +26,5 @@
 @endsection
 
 @section('footer')
-    copyright 2017 tuyano.
+    copyright 2018 JFE Engineering Corporation.
 @endsection

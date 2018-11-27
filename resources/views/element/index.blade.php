@@ -8,19 +8,18 @@
 
 <!-- 親レイアウトに'menubar'というyieldがあれば、そこにはめ込まれて表示される-->
 @section('menubar')
-    インデックスページ
+    部材一覧
 @endsection
 
 @section('content')
-    <p>マスタメンテナンス</p>
-    @component('components.message')
-        @slot('msg_title')
-            Element
-        @endslot
-        @slot('msg_content')
-            部材の一覧
-        @endslot
-    @endcomponent
+    {{--@component('components.message')--}}
+        {{--@slot('msg_title')--}}
+            {{--Element--}}
+        {{--@endslot--}}
+        {{--@slot('msg_content')--}}
+            {{--部材の一覧--}}
+        {{--@endslot--}}
+    {{--@endcomponent--}}
     {{--<A href="/location/add">新規追加</A>--}}
     <table>
         <tr>
@@ -62,12 +61,13 @@
                 @else
                     <td></td>
                 @endif
-                <td>{{$item->rack_id}}</td>
+                {{--<td>{{$item->rack_id}}</td>--}}
+                <td><A href="/rack?id={{$item->rack_id}}">{{$item->rack_id}}</A></td>
             </tr>
         @endforeach
     </table>
 @endsection
 
 @section('footer')
-    copyright 2017 tuyano.
+    copyright 2018 JFE Engineering Corporation.
 @endsection

@@ -8,19 +8,20 @@
 
 <!-- 親レイアウトに'menubar'というyieldがあれば、そこにはめ込まれて表示される-->
 @section('menubar')
-    インデックスページ
+    @parent
+    ロケーションマスター管理
 @endsection
 
 @section('content')
-    <p>マスタメンテナンス</p>
-    @component('components.message')
-        @slot('msg_title')
-            Locationテーブル
-        @endslot
-        @slot('msg_content')
-            プロジェクトごとに拠点を定義します。
-        @endslot
-    @endcomponent
+    {{--@component('components.message')--}}
+        {{--@slot('msg_title')--}}
+            {{--Locationテーブル--}}
+        {{--@endslot--}}
+        {{--@slot('msg_content')--}}
+            {{--プロジェクトごとに拠点を定義します。--}}
+        {{--@endslot--}}
+    {{--@endcomponent--}}
+    <A href="/">戻る</A>
     <A href="/location/add">新規追加</A>
     <table>
         <tr>
@@ -51,5 +52,5 @@
 @endsection
 
 @section('footer')
-    copyright 2017 tuyano.
+    copyright 2018 JFE Engineering Corporation.
 @endsection

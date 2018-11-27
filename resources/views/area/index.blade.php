@@ -8,19 +8,19 @@
 
 <!-- 親レイアウトに'menubar'というyieldがあれば、そこにはめ込まれて表示される-->
 @section('menubar')
-    インデックスページ
+    @parent
+    エリアマスター管理
 @endsection
 
 @section('content')
-    <p>マスタメンテナンス</p>
-    @component('components.message')
-        @slot('msg_title')
-            Areasテーブル
-        @endslot
-        @slot('msg_content')
-            拠点ごとにエリアを定義します。
-        @endslot
-    @endcomponent
+    {{--@component('components.message')--}}
+        {{--@slot('msg_title')--}}
+            {{--Areasテーブル--}}
+        {{--@endslot--}}
+        {{--@slot('msg_content')--}}
+            {{--拠点ごとにエリアを定義します。--}}
+        {{--@endslot--}}
+    {{--@endcomponent--}}
     @if(isset($id))
         <A href="/location?id={{$id}}">戻る</A>
         <A href="/area/add?id={{$id}}">新規追加</A>

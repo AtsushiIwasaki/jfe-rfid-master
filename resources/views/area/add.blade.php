@@ -7,7 +7,7 @@
 <!--　メニュー -->
 @section('menubar')
     @parent
-    新規作成ページ
+    エリアの新規作成
 @endsection
 
 <!-- コンテンツ -->
