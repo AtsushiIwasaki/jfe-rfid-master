@@ -22,8 +22,8 @@
         {{--@endslot--}}
     {{--@endcomponent--}}
     @if(isset($id))
-        <A href="/location?id={{$id}}">戻る</A>
-        <A href="/area/add?id={{$id}}">新規追加</A>
+        <A href="{{url('location?id')}}?id={{$id}}">戻る</A>
+        <A href="{{url('/area/add')}}?id={{$id}}">新規追加</A>
     @endif
     <table>
         <tr>
@@ -48,12 +48,12 @@
                 <td>{{$item->location_name}}</td>
                 <td>{{$item->area_id}}</td>
                 <td>{{$item->area_name}}</td>
-                <td><A href="/area/edit?id={{$item->area_id}}">変更</A><A href="/area/del?id={{$item->area_id}}">削除</A></td>
+                <td><A href="{{url('/area/edit')}}?id={{$item->area_id}}">変更</A><A href="{{url('/area/del')}}?id={{$item->area_id}}">削除</A></td>
             </tr>
         @endforeach
     </table>
 @endsection
 
 @section('footer')
-    copyright 2017 tuyano.
+    copyright 2018 JFE Engineering Corporation.
 @endsection

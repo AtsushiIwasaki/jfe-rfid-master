@@ -62,7 +62,8 @@
                     <td></td>
                 @endif
                 {{--<td>{{$item->rack_id}}</td>--}}
-                <td><A href="/rack?id={{$item->rack_id}}">{{$item->rack_id}}</A></td>
+{{--                <td><A href="/rack?id={{$item->rack_id}}">{{$item->rack_id}}</A></td>--}}
+                <td><A href="{{url('/rack')}}?id={{$item->rack_id}}">{{$item->rack_id}}</A></td>
             </tr>
         @endforeach
     </table>

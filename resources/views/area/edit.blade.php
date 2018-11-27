@@ -8,9 +8,9 @@
 @endsection
 
 @section('content')
-    <A href="/area?id={{$form->location_id}}">戻る</A>
+    <A href="{{url('/area')}}?id={{$form->location_id}}">戻る</A>
     <table>
-        <form action="/area/edit" method="post">
+        <form action={{url('/area/edit')}} method="post">
             {{csrf_field()}}
             <input type="hidden" name="id" value="{{$form->area_id}}">
             <input type="hidden" name="location_id" value="{{$form->location_id}}">
@@ -31,5 +31,5 @@
 @endsection
 
 @section('footer')
-    copyright 2017 tuyano.
+    copyright 2018 JFE Engineering Corporation.
 @endsection

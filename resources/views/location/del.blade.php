@@ -8,9 +8,9 @@
 @endsection
 
 @section('content')
-    <A href="/location?id={{$form->id}}">戻る</A>
+    <A href="{{url('/location')}}?id={{$form->id}}">戻る</A>
     <table>
-        <form action="/location/del" method="post">
+        <form action="{{url('/location/del')}}" method="post">
             {{ csrf_field() }}
             <input type="hidden" name="id" value="{{$form->id}}">
             <tr>

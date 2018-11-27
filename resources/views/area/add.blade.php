@@ -12,9 +12,9 @@
 
 <!-- コンテンツ -->
 @section('content')
-    <A href="/area?id={{$location_id}}">戻る</A>
+    <A href="{{url('/area')}}?id={{$location_id}}">戻る</A>
     <table>
-        <form action="/area/add" method="post">
+        <form action="{{url('/area/add')}}" method="post">
             {{ csrf_field() }}
             <input type="hidden" name="location_id" value="{{$location_id}}">
             <tr>

@@ -21,8 +21,8 @@
             {{--プロジェクトごとに拠点を定義します。--}}
         {{--@endslot--}}
     {{--@endcomponent--}}
-    <A href="/">戻る</A>
-    <A href="/location/add">新規追加</A>
+    <A href="{{url('/')}}">戻る</A>
+    <A href="{{url('/location/add')}}">新規追加</A>
     <table>
         <tr>
             <th>
@@ -38,12 +38,12 @@
         @foreach($items as $item)
             <tr>
                 <td>{{$item->id}}</td>
-                <td><A href="/area?id={{$item->id}}">{{$item->location_name}}</A></td>
+                <td><A href="{{url('/area')}}?id={{$item->id}}">{{$item->location_name}}</A></td>
                 <td>{{$count[$i]}}</td>
                 @if($count[$i] != 0)
-                    <td><A href="/location/edit?id={{$item->id}}">変更</A>削除</td>
+                    <td><A href="{{url('/location/edit')}}?id={{$item->id}}">変更</A>削除</td>
                 @else
-                    <td><A href="/location/edit?id={{$item->id}}">変更</A><A href="/location/del?id={{$item->id}}">削除</A></td>
+                    <td><A href="{{url('/location/edit')}}?id={{$item->id}}">変更</A><A href="{{url('/location/del')}}?id={{$item->id}}">削除</A></td>
                 @endif
             </tr>
             <?php $i++ ?>

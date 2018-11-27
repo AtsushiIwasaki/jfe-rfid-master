@@ -13,9 +13,9 @@
 
 <!-- コンテンツ -->
 @section('content')
-    <A href="/location">戻る</A>
+    <A href="{{url('/location')}}">戻る</A>
     <table>
-        <form action="/location/add" method="post">
+        <form action="{{url('/location/add')}}" method="post">
             {{ csrf_field() }}
             <tr>
                 <th>location_name:</th>
