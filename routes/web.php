@@ -48,4 +48,21 @@ Route::post('area/del', 'AreaController@remove');
 
 Route::get('element', 'ElementController@index');
 Route::get('rack', 'RackController@index');
-Route::get('rack', 'RackController@index');
+
+Route::get('status', 'StatusController@index');
+Route::get('status/add', 'StatusController@add');
+Route::post('status/add', 'StatusController@create');
+Route::get('status/edit', 'StatusController@edit');
+Route::post('status/edit', 'StatusController@update');
+Route::get('status/del', 'StatusController@del');
+Route::post('status/del', 'StatusController@remove');
+
+Route::get('district', 'DistrictController@index');
+Route::get('district/add', 'DistrictController@add');
+Route::post('district/add', 'DistrictController@create');
+Route::get('district/edit', 'DistrictController@edit');
+Route::post('district/edit', 'DistrictController@update');
+Route::get('district/del', 'DistrictController@del');
+Route::post('district/del', 'DistrictController@remove');
+
+Route::get('rfidtag', 'RfidTagController@index');

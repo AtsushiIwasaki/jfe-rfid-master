@@ -52,7 +52,7 @@ class LocationController extends Controller
                            (location_name, project_id, created_by, updated_by) 
                            values (:location_name, :project_id, :created_by, :updated_by)',
                            $param);
-        return redirect('location');
+        return redirect(url('/location'));
     }
 
     //edit
@@ -80,7 +80,7 @@ class LocationController extends Controller
         DB::update('update locations 
                     set location_name =:location_name, project_id =:project_id, created_by =:created_by, updated_by =:updated_by 
                     where id = :id', $param);
-        return redirect('/location');
+        return redirect(url('/location'));
     }
 
     //delete
@@ -98,6 +98,6 @@ class LocationController extends Controller
 //        DB::delete('delete from locations where id = :id', $param);
         DB::update('update locations set disable_flg = true where id = :id', $param);
 
-        return redirect('/location');
+        return redirect(url('/location'));
     }
 }

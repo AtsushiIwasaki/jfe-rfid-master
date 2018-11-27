@@ -4,7 +4,7 @@
 @extends('layouts.helloapp')
 
 <!-- titleという名前のセクションに、indexというテキスト値を設定する-->
-@section('title', 'index')
+@section('title', 'RFIDTag List')
 
 <!-- 親レイアウトに'menubar'というyieldがあれば、そこにはめ込まれて表示される-->
 @section('menubar')
@@ -21,6 +21,7 @@
         {{--@endslot--}}
     {{--@endcomponent--}}
     {{--<A href="/location/add">新規追加</A>--}}
+    <A href="{{url('/')}}">戻る</A>
     <table>
         <tr>
             <th>ID</th>

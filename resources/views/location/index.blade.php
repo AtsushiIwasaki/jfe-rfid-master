@@ -3,8 +3,7 @@
 <!-- 親レイアウトを指定 -->
 @extends('layouts.helloapp')
 
-<!-- titleという名前のセクションに、indexというテキスト値を設定する-->
-@section('title', 'index')
+@section('title', 'Location Mater Maintenance')
 
 <!-- 親レイアウトに'menubar'というyieldがあれば、そこにはめ込まれて表示される-->
 @section('menubar')

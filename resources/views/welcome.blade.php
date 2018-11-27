@@ -85,12 +85,11 @@
                 </div>
 
                 <div class="links">
-                    <a href="element">部材一覧</a>
-                    <a href="location">ロケーションマスタメンテ</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{url('element')}}">部材一覧</a>
+                    <a href="{{url('rfidtag')}}">RFIDタグマスタメンテ</a>
+                    <a href="{{url('location')}}">ロケーションマスタメンテ</a>
+                    <a href="{{url('status')}}">ステータスマスタメンテ</a>
+                    <a href="{{url('district')}}">ディストリクトマスタメンテ</a>
                 </div>
             </div>
         </div>

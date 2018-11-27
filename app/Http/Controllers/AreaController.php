@@ -37,7 +37,7 @@ class AreaController extends Controller
             return view('area.add', ['location_id' => $request->id, 'location_name' => $data[0]->location_name]);
         }
         else {
-            return redirect('/location');
+            return redirect(url('/location'));
         }
     }
 
@@ -55,7 +55,7 @@ class AreaController extends Controller
                            (area_name, location_id, created_by, updated_by)
                            values (:area_name, :location_id, :created_by, :updated_by)',
                             $param);
-        return redirect('/area?id=' . $request->location_id);
+        return redirect(url('/area') . '?id=' . $request->location_id);
     }
 
     //edit
@@ -79,7 +79,7 @@ class AreaController extends Controller
         DB::update('update areas 
                     set area_name =:area_name, created_by =:created_by, updated_by =:updated_by 
                     where id = :id', $param);
-        return redirect('/area?id=' . $request->location_id);
+        return redirect(url('/area') . '?id=' . $request->location_id);
     }
 
     //delete
@@ -95,6 +95,6 @@ class AreaController extends Controller
     {
         $param = ['id' => $request->id];
         DB::update('update areas set disable_flg = true where id = :id', $param);
-        return redirect('/area?id=' . $request->location_id);
+        return redirect(url('/area') . '?id=' . $request->location_id);
     }
 }
