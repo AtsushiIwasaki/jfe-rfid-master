@@ -9,7 +9,12 @@ class ElementController extends Controller
 {
     public function index(Request $request)
     {
-        $items = DB::select('select elements.id as element_id, element_statuses.rack_statuses_id as rack_id, * from elements 
+        $items = DB::select('select 
+                                        elements.id as element_id, 
+                                        element_statuses.rack_statuses_id as rack_id,
+                                        tag_mappings.created_at as create_time, 
+                                        * 
+                                    from elements 
                                         inner join element_statuses 
                                             on elements.id = element_statuses.element_id 
                                             and element_statuses.deleted_at is null

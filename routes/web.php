@@ -66,3 +66,5 @@ Route::get('district/del', 'DistrictController@del');
 Route::post('district/del', 'DistrictController@remove');
 
 Route::get('rfidtag', 'RfidTagController@index');
+
+Route::get('elementHistory', 'ElementHistoryController@index');
